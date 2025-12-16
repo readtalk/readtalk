@@ -12,3 +12,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 # READTalk Development
+powered by SOEPARNO Technology Inc. / SOEPARNO ENTERPRISE Corp.
