@@ -11,7 +11,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-# READTalk App Development
+# READTalk Chat App Development
 ![Image](https://github.com/user-attachments/assets/25d81e77-3140-4f44-9224-2f1102c8dbb5)`
 ###### about: 
-READTalk Messenger Eco-System
+READTalk Chat App Eco-System
