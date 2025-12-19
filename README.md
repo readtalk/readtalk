@@ -12,3 +12,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 # READTalk App Development
+https://github.com/user-attachments/assets/36244ab8-6b21-47da-9f67-ebc3fbe6bcb2
