@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READTalk - Register</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #000000; /* hitam */
+      margin-bottom: 20px;
+    }
+    input[type="email"] {
+      width: 80%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      padding: 14px 45px;
+      font-size: 16px;
+      background: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    p.notice {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
+    }
+    p.login-link {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    p.login-link a {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>#READTalk Trusted</h1>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button id="sendBtn">Register</button>
+    <p class="notice">We will send a one-time link or code to your email to login.</p>
+    <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById('sendBtn').addEventListener('click', () => {
+      const email = document.getElementById('email').value;
+      if(!email) {
+        alert('Please enter a valid email');
+        return;
+      }
+      // TODO: Kirim OTP / Magic Link ke backend
+      alert(`OTP / Magic Link will be sent to: ${email}`);
+      // Setelah sukses, redirect ke halaman chat
+      // window.location.href = '/chat.html';
+    });
+  </script>
+
+</body>
+  </html>
