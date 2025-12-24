@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READTalk - Register/Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .header {
+      padding: 25px 20px;
+      text-align: center;
+      background: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #ff0000;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 0, 0, 0.05);
+    }
+
+    .header h1 {
+      font-size: 28px;
+      color: #000000;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #666666;
+      margin-top: 8px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: calc(100vh - 140px);
+    }
+
+    /* Iframe Container */
+    .iframe-container {
+      width: 100%;
+      max-width: 500px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid #e8e8e8;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
+      display: block;
+    }
+
+    /* Loading State for Iframe */
+    .iframe-loading {
+      position: absolute;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: #888888;
+      z-index: 5;
+    }
+
+    .iframe-loading.hidden {
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 25px 20px;
+      background: #ffffff;
+      border-top: 1px solid #e0e0e0;
+      color: #aaaaaa;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    .footer a {
+      color: #ff0000;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 24px;
+      }
+      
+      .iframe-container {
+        border-radius: 12px;
+      }
+      
+      .iframe-container iframe {
+        height: 600px;
+      }
+      
+      .container {
+        padding: 20px 15px;
+      }
+    }
+
+    /* Animation for page transition */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container, .header {
+      animation: fadeIn 0.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <button class="back-btn" onclick="window.history.back()">← Back</button>
+    <h1>Create Your Account</h1>
+    <p>Register with your email to get your personal READTalk room. Already have an account? You can login directly in the form below.</p>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="iframe-container">
+      <!-- Loading indicator -->
+      <div class="iframe-loading" id="iframeLoading">
+        Loading registration form...
+      </div>
+      
+      <!-- Iframe -->
+      <iframe 
+        id="registerIframe"
+        src="https://log.readtalk.workers.dev/password/register"
+        title="READTalk Registration Form"
+        allow="clipboard-write"
+        onload="document.getElementById('iframeLoading').classList.add('hidden')"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <a href="privacy-policy.html" target="_blank">Privacy Policy</a> | 
+      <a href="terms-of-service.html" target="_blank">Terms of Service</a> | 
+      <a href="index.html">Home</a>
+    </div>
+    <div style="margin-top: 10px;">
+      © 2025 SOEPARNO ENTERPRISE Corp. - SOEPARNO Technology
+    </div>
+  </footer>
+
+  <script>
+    // Handle iframe loading errors
+    document.getElementById('registerIframe').addEventListener('error', function() {
+      const loadingEl = document.getElementById('iframeLoading');
+      loadingEl.innerHTML = 'Failed to load form. Please check your connection or try again later.';
+      loadingEl.style.color = '#ff0000';
+    });
+
+    // Handle messages from iframe (if the form inside supports postMessage)
+    window.addEventListener('message', function(event) {
+      // You can handle successful registration here
+      if (event.data && event.data.type === 'REGISTRATION_SUCCESS') {
+        alert('Registration successful! Redirecting...');
+        // Redirect to next page (e.g., verification or WhatsApp lobby)
+        // window.location.href = 'verification.html';
+      }
+    });
+
+    // Optional: Auto-resize iframe based on content
+    function resizeIframe() {
+      const iframe = document.getElementById('registerIframe');
+      try {
+        const height = iframe.contentWindow.document.body.scrollHeight;
+        iframe.style.height = height + 'px';
+      } catch (e) {
+        // Cross-origin restriction, ignore
+      }
+    }
+  </script>
+</body>
+</html>
