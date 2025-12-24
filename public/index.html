@@ -3,21 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- PWA Meta Tags -->
+  <!-- TAMBAHAN PWA MULAI -->
   <meta name="theme-color" content="#ff0000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  
-  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
-  
-  <!-- Icons -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>">
-  
+  <!-- TAMBAHAN PWA SELESAI -->
   <title>READTalk - User</title>
   <style>
+    /* STYLE ASLI ANDA TETAP SAMA */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
       height: 100%;
@@ -132,12 +124,6 @@
       border-radius: 12px;
       cursor: pointer;
       font-weight: bold;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .agree-btn:active {
-      transform: scale(0.95);
-      background: #cc0000;
     }
 
     .credit-welcome {
@@ -198,43 +184,15 @@
       }, 800);
     }, 5000);
 
-    // Agree button redirect dengan base64 encoding
+    // Agree button redirect
     document.getElementById('agreeBtn').addEventListener('click', () => {
-      // Encode URL tujuan ke base64
-      const targetUrl = 'https://user-readtalk.pages.dev/log.html';
-      const encodedUrl = btoa(targetUrl);
-      
-      // Redirect dengan teknik base64
-      const redirectPage = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>body{margin:0;padding:0;background:#fff}</style>
-        </head>
-        <body>
-          <script>
-            window.location.href = atob('${encodedUrl}');
-          <\/script>
-        </body>
-        </html>`;
-      
-      document.write(redirectPage);
+      window.location.href = 'log.html';
     });
 
-    // Service Worker Registration untuk PWA
+    // Service Worker Registration untuk PWA (Opsional)
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(console.log);
-      });
+      navigator.serviceWorker.register('sw.js').catch(console.log);
     }
-
-    // PWA Install Prompt
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      // Bisa tambahkan button install custom di sini
-    });
   </script>
 
 </body>
