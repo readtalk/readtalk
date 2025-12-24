@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>READTalk Auth</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- PWA ↓ -->
+<meta name="theme-color" content="#ff0000">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+<!-- SAMPE SINI ↑ -->
+<title>READTalk - Authentication</title>
 <style>*{margin:0;padding:0}html,body,iframe{width:100%;height:100%}</style>
 </head>
 <body>
 <iframe id="auth"></iframe>
 <script>
-const b='aHR0cHM6Ly9sb2cucmVhZHRhbGsud29ya2Vycy5kZXYvcGFzc3dvcmQvcmVnaXN0ZXI='; // log.readtalk.workers.dev/password/register
+const b='aHR0cHM6Ly9sb2cucmVhZHRhbGsud29ya2Vycy5kZXYvcGFzc3dvcmQvcmVnaXN0ZXI=';
 const h=atob(b);
 const p=`<iframe src="${h}" style="width:100%;height:100%;border:0"></iframe>`;
 document.getElementById('auth').src='data:text/html;base64,'+btoa(p);
+
+// Service Worker registration
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js');
+}
 </script>
 </body>
 </html>
