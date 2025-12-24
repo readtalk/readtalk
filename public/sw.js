@@ -1,7 +1,22 @@
-self.addEventListener('install', e => e.waitUntil(caches.open('readtalk').then(cache => 
-  cache.addAll(['./', './index.html', './log.html'])
-)));
-self.addEventListener('fetch', e => e.respondWith(
-  caches.match(e.request).then(response => response || fetch(e.request))
-));
-self.addEventListener('fetch', event => {});
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('readtalk-v1').then((cache) => {
+      return cache.addAll([
+        './',           // index.html
+        './index.html',
+        './log.html',
+        './manifest.json'
+        // path 192.png, 512.png
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      // file cache network
+      return response || fetch(event.request);
+    })
+  );
+});
