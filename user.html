@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>READTalk - User</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Loading Screen */
+    .loading {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1.5s ease-out;
+      z-index: 10;
+    }
+
+    .loading.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Logo */
+    .logo {
+      width: 180px;
+      height: auto;
+      opacity: 0;
+      animation: fadeInLogo 3s ease-in-out forwards;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeInLogo {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Typewriter */
+    .typewriter {
+      font-size: 18px;
+      color: #000000;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: visible;
+      border-right: 2px solid #000000;
+      margin-top: 10px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { border-color: transparent; }
+      25%, 75% { border-color: #ff0000; }
+    }
+
+    .credit-loading {
+      position: absolute;
+      bottom: 50px;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+
+    /* Welcome Screen */
+    .welcome {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+      padding: 20px;
+    }
+
+    .welcome.active {
+      opacity: 1;
+    }
+
+    .welcome-title {
+      font-size: 40px;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .welcome-text {
+      font-size: 14px;
+      color: #666666;
+      max-width: 340px;
+      line-height: 1.6;
+      margin-bottom: 70px;
+    }
+
+    .welcome-text a {
+      color: #ff0000;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .agree-btn {
+      padding: 15px 60px;
+      font-size: 18px;
+      background: #ff0000;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .credit-welcome {
+      position: absolute;
+      bottom: 50px;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading" id="loading">
+    <img class="logo" src="logo.webp" alt="READ Talk Logo">
+    <div id="typewriter" class="typewriter"></div>
+    <div class="credit-loading">
+      © 2025 SOEPARNO ENTERPRISE Corp.
+    </div>
+  </div>
+
+  <!-- Welcome Screen -->
+  <div class="welcome" id="welcome">
+    <div>
+      <h1 class="welcome-title">Welcome to READTalk</h1>
+      <p class="welcome-text">
+        Read our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>. 
+        Tap "Agree and continue" to accept the <a href="terms-of-service.html" target="_blank">Terms of Service</a>.
+      </p>
+      <button class="agree-btn" id="agreeBtn">Agree and continue</button>
+    </div>
+    <div class="credit-welcome">
+      SOEPARNO Technology
+    </div>
+  </div>
+
+  <script>
+    // Typewriter Effect
+    const text = "READTalk to Talk with Trust";
+    const typewriterEl = document.getElementById('typewriter');
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        typewriterEl.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 120);
+      }
+    }
+
+    // typewriter logo fade in
+    setTimeout(() => { typeWriter(); }, 1500);
+
+    // Splash screen duration 5s
+    setTimeout(() => {
+      document.getElementById('loading').classList.add('fade-out');
+      setTimeout(() => {
+        document.getElementById('welcome').classList.add('active');
+      }, 800);
+    }, 5000);
+
+    // Agree button redirect
+    document.getElementById('agreeBtn').addEventListener('click', () => {
+      window.location.href = 'log.html';
+    });
+  </script>
+
+</body>
+</html>
