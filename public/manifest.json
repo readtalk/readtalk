@@ -1,0 +1,9 @@
+{
+    "name": "READTalk",
+    "short_name": "READTalk",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0051c3",
+    "icons": []
+}
