@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>READTalk — Room</title>
+<title>READTalk — Gate</title>
 <style>
-/* === WHATSAPP PROPERTY PRESISI === */
+/* === READTalk PROPERTY PRESISI === */
 :root {
     --whatsapp-bg: #f0f0f0;
     --whatsapp-header-bg: #ffffff;
@@ -35,23 +35,23 @@ body {
     flex-direction: column;
 }
 
-/* === HEADER WHATSAPP PRESISI === */
+/* === HEADER READTalk PRESISI === */
 .header { 
     position: sticky; 
     top: 0; 
     background: var(--whatsapp-header-bg); 
-    padding: 10px 16px 10px 12px; /* WhatsApp exact padding */
+    padding: 10px 16px 10px 12px; /* READTalk exact padding */
     border-bottom: 1px solid var(--whatsapp-border); 
     z-index: 10; 
     display: flex; 
     align-items: center; 
     justify-content: space-between;
-    height: 60px; /* WhatsApp header height */
+    height: 60px; /* READTalk header height */
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .header h1 { 
-    font-size: 20px; /* WhatsApp header font size */
+    font-size: 20px; /* READTalk header font size */
     font-weight: 700; 
     color: var(--whatsapp-text-primary);
     flex: 1;
@@ -84,14 +84,14 @@ body {
 }
 
 .user-name {
-    font-size: 17px; /* WhatsApp contact name size */
+    font-size: 17px; /* READTalk contact name size */
     font-weight: 600;
     color: var(--whatsapp-text-primary);
     line-height: 1.2;
 }
 
 .user-username {
-    font-size: 13px; /* WhatsApp status text size */
+    font-size: 13px; /* READTalk status text size */
     color: var(--whatsapp-text-secondary);
     font-weight: 400;
 }
@@ -99,13 +99,13 @@ body {
 /* Header actions */
 .header-actions {
     display: flex;
-    gap: 20px; /* WhatsApp icon spacing */
+    gap: 20px; /* READTalk icon spacing */
 }
 
 .header-btn {
     background: none;
     border: none;
-    font-size: 20px; /* WhatsApp icon size */
+    font-size: 20px; /* READTalk icon size */
     color: var(--whatsapp-text-primary);
     cursor: pointer;
     width: 40px;
@@ -121,9 +121,9 @@ body {
     background: var(--whatsapp-hover);
 }
 
-/* === SEARCH BAR WHATSAPP PRESISI === */
+/* === SEARCH BAR READTalk PRESISI === */
 .search { 
-    padding: 8px 12px; /* WhatsApp search padding */
+    padding: 8px 12px; /* READTalk search padding */
     background: var(--whatsapp-header-bg);
     border-bottom: 1px solid var(--whatsapp-border);
 }
@@ -134,11 +134,11 @@ body {
 
 .search input { 
     width: 100%; 
-    padding: 12px 16px 12px 44px; /* WhatsApp input padding with icon space */
-    border-radius: 20px; /* WhatsApp search radius */
+    padding: 12px 16px 12px 44px; /* READTalk input padding with icon space */
+    border-radius: 20px; /* READTalk search radius */
     border: 1px solid var(--whatsapp-border); 
     outline: none; 
-    font-size: 15px; /* WhatsApp input font size */
+    font-size: 15px; /* READTalk input font size */
     background: var(--whatsapp-search-bg);
     color: var(--whatsapp-text-primary);
     font-family: inherit;
@@ -171,18 +171,18 @@ body {
     background: var(--whatsapp-header-bg);
 }
 
-/* === ROOM ITEM WHATSAPP PRESISI === */
+/* === ROOM ITEM READTalk PRESISI === */
 .room { 
     display: flex; 
     align-items: center; 
-    padding: 12px 16px 12px 12px; /* WhatsApp room padding */
-    gap: 12px; /* WhatsApp avatar-text gap */
+    padding: 12px 16px 12px 12px; /* READTalk room padding */
+    gap: 12px; /* READTalk avatar-text gap */
     background: var(--whatsapp-card-bg); 
     cursor: pointer; 
     border-bottom: 1px solid var(--whatsapp-border); 
     position: relative;
     transition: background 0.2s;
-    min-height: 80px; /* WhatsApp minimum room height */
+    min-height: 80px; /* READTalk minimum room height */
 }
 
 .room:hover { 
@@ -193,9 +193,9 @@ body {
     background: #f0f8ff; /* Light selection color */
 }
 
-/* Avatar WhatsApp style */
+/* Avatar READTalk style */
 .avatar { 
-    width: 56px; /* WhatsApp avatar size */
+    width: 56px; /* READTalk avatar size */
     height: 56px; 
     border-radius: 50%; 
     background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
@@ -223,7 +223,7 @@ body {
     right: 2px;
     width: 12px;
     height: 12px;
-    background: #4caf50; /* WhatsApp green */
+    background: #4caf50; /* READTalk notif green */
     border: 2px solid white;
     border-radius: 50%;
 }
@@ -238,11 +238,11 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: flex-start; 
-    margin-bottom: 4px; /* WhatsApp spacing */
+    margin-bottom: 4px; /* READTalk spacing */
 }
 
 .room-name { 
-    font-size: 16px; /* WhatsApp room name size */
+    font-size: 16px; /* READTalk room name size */
     font-weight: 600; 
     color: var(--whatsapp-text-primary);
     white-space: nowrap; 
@@ -252,7 +252,7 @@ body {
 }
 
 .room-time { 
-    font-size: 12px; /* WhatsApp time stamp size */
+    font-size: 12px; /* READTalk time stamp size */
     color: var(--whatsapp-text-time);
     flex-shrink: 0; 
     margin-left: 8px;
@@ -260,7 +260,7 @@ body {
 }
 
 .room-preview { 
-    font-size: 14px; /* WhatsApp preview text size */
+    font-size: 14px; /* READTalk preview text size */
     color: var(--whatsapp-text-secondary); 
     white-space: nowrap; 
     overflow: hidden; 
@@ -269,7 +269,7 @@ body {
     line-height: 1.4;
 }
 
-/* Unread badge WhatsApp style */
+/* Unread badge READTalk style */
 .badge { 
     background: var(--whatsapp-unread-bg); 
     color: var(--whatsapp-unread-text); 
@@ -356,12 +356,12 @@ body {
     text-align: center;
 }
 
-/* FAB (Floating Action Button) WhatsApp style */
+/* FAB (Floating Action Button) READTalk style */
 .fab { 
     position: fixed; 
     right: 20px; 
     bottom: 20px; 
-    width: 56px; /* WhatsApp FAB size */
+    width: 56px; /* READTalk FAB size */
     height: 56px; 
     border-radius: 50%; 
     background: #e53935; /* READTalk red */
@@ -394,7 +394,7 @@ body {
     border-top: 1px solid var(--whatsapp-border);
 }
 
-/* === SCROLLBAR WHATSAPP STYLE === */
+/* === SCROLLBAR READTalk STYLE === */
 .room-list-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -514,15 +514,15 @@ body {
 </button>
 
 <script>
-// ===== DATA STRUCTURE (SAMA DENGAN chat.html) =====
-// Helper: email → name + username (SAMA dengan chat.html)
+// ===== DATA STRUCTURE =====
+// Helper: email → name + username
 function emailToUser(email){
     const [name] = email.split('@');
     const displayName = name.split('.').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
     return { name: displayName, username: '@' + name, email: email };
 }
 
-// Current user (SAMA dengan chat.html)
+// Current user
 const userEmail = localStorage.getItem('userEmail') || 'john.doe@example.com';
 const user = emailToUser(userEmail);
 
@@ -531,7 +531,7 @@ document.getElementById('userAvatar').textContent = user.name.split(' ').map(n =
 document.getElementById('userName').textContent = user.name;
 document.getElementById('userUsername').textContent = user.username;
 
-// Mock room data (SAMA STRUCTURE dengan chat.html)
+// Mock room data
 let rooms = [
     {
         id: 'self',
@@ -607,7 +607,7 @@ let rooms = [
     }
 ];
 
-// Sort by latest message (WhatsApp style)
+// Sort by latest message (READTalk style)
 function sortRooms() {
     const timeOrder = { 'Hari ini': 0, 'Kemarin': 1 };
     return rooms.sort((a, b) => {
@@ -633,7 +633,7 @@ const emptyState = document.getElementById('emptyState');
 const archivedHeader = document.getElementById('archivedHeader');
 const searchInput = document.getElementById('searchInput');
 
-// Render rooms dengan WhatsApp property
+// Render rooms READTalk property
 function renderRooms(filter = '') {
     const filteredRooms = rooms.filter(room => 
         room.name.toLowerCase().includes(filter.toLowerCase()) ||
@@ -673,7 +673,7 @@ function renderRooms(filter = '') {
     }
 }
 
-// Create room element dengan WhatsApp styling
+// Create room element dengan READTalk styling
 function createRoomElement(room) {
     const li = document.createElement('li');
     li.className = 'room' + (room.unread > 0 ? ' unread' : '');
@@ -681,7 +681,7 @@ function createRoomElement(room) {
     // Avatar initials
     const avatarText = room.avatar || room.name.split(' ').map(n => n[0]).join('').substring(0, 2);
     
-    // Time format WhatsApp style
+    // Time format READTalk style
     const timeText = formatTime(room.time);
     
     li.innerHTML = `
@@ -720,7 +720,7 @@ function createRoomElement(room) {
         </div>
     `;
     
-    // Click to open chat (SAMA dengan sebelumnya)
+    // Click to open chat
     li.addEventListener('click', (e) => {
         if (!e.target.closest('.options') && !e.target.closest('.dropdown')) {
             window.location.href = 'chat.html?room=' + room.id;
@@ -730,7 +730,7 @@ function createRoomElement(room) {
     return li;
 }
 
-// Format time WhatsApp style
+// Format time READTalk style
 function formatTime(timeStr) {
     const today = new Date();
     const yesterday = new Date(today);
