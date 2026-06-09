@@ -1,22 +1,22 @@
 export const footerSocials = [
   {
     name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
+    url: 'https://twitter.com/',
     icon: "mdi:twitter",
   },
   {
     name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
+    url: 'https://youtube.com/',
     icon: "mdi:youtube",
   },
   {
     name: 'Github',
-    url: 'https://github.com/jaydanurwin',
+    url: 'https://github.com/',
     icon: "mdi:github",
   },
   {
     name: 'Discord',
-    url: 'https://astro.build/chat',
+    url: 'https://astro.build/',
     icon: "ic:baseline-discord",
   },
 ]
@@ -72,8 +72,8 @@ export const footerLists = [
         slug: '/theme/theme-setup',
       },
       {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
+        title: 'Customizing',
+        slug: '/theme/customizing',
       }
 		],
 	},
