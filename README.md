@@ -7,9 +7,6 @@
   <a href="https://twitter.com/">
   <img src="assets/twitter-badge.svg" alt="Follow READTalk on Twitter"/>
 </a>
-  <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
-    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
-  </a>
 </div>
 <br/>
 
@@ -56,7 +53,7 @@ npm start
 
 ## Deploy
 
-Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
+Feel free to deploy and host your site on your favorite static hosting service such as Cloudflare, Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
 
 Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
 
