@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="assets/gh-banner.png" alt="Odyssey Theme Banner">
+  <img src="assets/gh-banner.png" alt="Astro Theme Banner">
 </p>
 
 <br/>
 <div align="center">
-  <a href="https://twitter.com/jaydanurwin">
-  <img src="assets/twitter-badge.svg" alt="Follow Jaydan Urwin on Twitter"/>
+  <a href="https://twitter.com/">
+  <img src="assets/twitter-badge.svg" alt="Follow READTalk on Twitter"/>
 </a>
   <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
     <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
@@ -13,9 +13,9 @@
 </div>
 <br/>
 
-# Odyssey Theme
+# Astro Theme
 
-Odyssey Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
+Astro Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
 
 ## Features
 
@@ -37,7 +37,7 @@ Odyssey Theme is a modern theme/starter for a business or startup's marketing we
 
 ## Demo
 
-View a [live demo](https://odyssey-theme.sapling.supply/) of the Odyssey Theme.
+View a [live demo](https://readtalk.pages.dev/) of the Astro Theme.
 
 ## Documentation
 
@@ -59,12 +59,6 @@ npm start
 Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
 
 Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
-
-## Sponsor
-
-If you find this theme useful, please consider donating to support the continued development of it with the link below
-
-[Donate to Odyssey Theme](https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0)
 
 ## Support
 
