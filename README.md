@@ -1,7 +1,3 @@
-# Astro Theme
-
-Astro Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
-
 ## Features
 
 <p align="center">
@@ -26,8 +22,8 @@ View a [live demo](https://web-readtalk.pages.dev/)
 
 ## Documentation
 
-1. View the [Theme Setup Guide](https://odyssey-theme.sapling.supply/theme/theme-setup)
-2. View the [Customizing the Theme Guide](https://odyssey-theme.sapling.supply/theme/customizing-odyssey)
+1. View the [Theme Setup Guide](https://web-readtalk.pages.dev/theme/style-guide/)
+3. View the [Customizing the Theme Guide](https://web-readtalk.pages.dev/theme/theme-setup/)
 
 ## Usage
 
