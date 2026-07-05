@@ -1,10 +1,10 @@
 {
-	"name": "odyssey-theme",
+	"name": "readtalk-theme",
 	"version": "3.1.0",
 	"private": false,
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:treefarmstudio/odyssey-theme"
+		"url": "git@github.com:readtalk/readtalk"
 	},
 	"scripts": {
 		"dev": "astro dev",
