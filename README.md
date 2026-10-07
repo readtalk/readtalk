@@ -1,1 +1,1 @@
-# [READTalk Messenger](https://readtalk.pages.dev/) by SOEPARNOTech
+# [READTalk Messenger](https://readtalk.pages.dev/)
