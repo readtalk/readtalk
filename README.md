@@ -1,10 +1,10 @@
-# [READTalk Messenger](https://readtalk.pages.dev/)
+# [Official Website Template](https://readtalk.pages.dev/)
 ```
-readtalk/
+root/
 ├── .astro/
 ├── .idx/
 ├── .vscode/
-├── assets/                          ← Asset README / badge
+├── assets/                         
 │   ├── discord-badge.svg
 │   ├── gh-banner.png
 │   ├── lh-screenshot.png
